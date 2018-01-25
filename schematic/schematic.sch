@@ -1,0 +1,167 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LM7805_TO220 U1
+U 1 1 5A6A0774
+P 5400 3250
+F 0 "U1" H 5250 3375 50  0000 C CNN
+F 1 "LM7805_TO220" H 5400 3375 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 5400 3475 50  0001 C CIN
+F 3 "" H 5400 3200 50  0001 C CNN
+	1    5400 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 5A6A07ED
+P 4850 3600
+F 0 "C2" H 4875 3700 50  0000 L CNN
+F 1 "100nF" H 4875 3500 50  0000 L CNN
+F 2 "" H 4888 3450 50  0001 C CNN
+F 3 "" H 4850 3600 50  0001 C CNN
+	1    4850 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 5A6A0848
+P 5950 3600
+F 0 "C3" H 5975 3700 50  0000 L CNN
+F 1 "100nF" H 5975 3500 50  0000 L CNN
+F 2 "" H 5988 3450 50  0001 C CNN
+F 3 "" H 5950 3600 50  0001 C CNN
+	1    5950 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3450 4850 3250
+Wire Wire Line
+	4300 3250 5100 3250
+Wire Wire Line
+	5700 3250 6500 3250
+Wire Wire Line
+	5950 3250 5950 3450
+Wire Wire Line
+	5400 3900 5400 3550
+$Comp
+L Earth #PWR2
+U 1 1 5A6A08CF
+P 5400 3900
+F 0 "#PWR2" H 5400 3650 50  0001 C CNN
+F 1 "Earth" H 5400 3750 50  0001 C CNN
+F 2 "" H 5400 3900 50  0001 C CNN
+F 3 "" H 5400 3900 50  0001 C CNN
+	1    5400 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 3900 6250 3900
+Wire Wire Line
+	4850 3900 4850 3750
+Wire Wire Line
+	5950 3900 5950 3750
+Connection ~ 5400 3900
+$Comp
+L CP C4
+U 1 1 5A6A0900
+P 6250 3600
+F 0 "C4" H 6275 3700 50  0000 L CNN
+F 1 "100uF" H 6275 3500 50  0000 L CNN
+F 2 "" H 6288 3450 50  0001 C CNN
+F 3 "" H 6250 3600 50  0001 C CNN
+	1    6250 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C1
+U 1 1 5A6A093F
+P 4550 3600
+F 0 "C1" H 4575 3700 50  0000 L CNN
+F 1 "100uF" H 4575 3500 50  0000 L CNN
+F 2 "" H 4588 3450 50  0001 C CNN
+F 3 "" H 4550 3600 50  0001 C CNN
+	1    4550 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 3450 4550 3250
+Connection ~ 4850 3250
+Wire Wire Line
+	4550 3900 4550 3750
+Connection ~ 4850 3900
+Wire Wire Line
+	6250 3900 6250 3750
+Connection ~ 5950 3900
+Wire Wire Line
+	6250 3250 6250 3450
+Connection ~ 5950 3250
+$Comp
+L +5V #PWR3
+U 1 1 5A6A0A44
+P 6500 3250
+F 0 "#PWR3" H 6500 3100 50  0001 C CNN
+F 1 "+5V" H 6500 3390 50  0000 C CNN
+F 2 "" H 6500 3250 50  0001 C CNN
+F 3 "" H 6500 3250 50  0001 C CNN
+	1    6500 3250
+	1    0    0    -1  
+$EndComp
+Connection ~ 6250 3250
+$Comp
+L +12V #PWR1
+U 1 1 5A6A0A7B
+P 4300 3250
+F 0 "#PWR1" H 4300 3100 50  0001 C CNN
+F 1 "+12V" H 4300 3390 50  0000 C CNN
+F 2 "" H 4300 3250 50  0001 C CNN
+F 3 "" H 4300 3250 50  0001 C CNN
+	1    4300 3250
+	1    0    0    -1  
+$EndComp
+Connection ~ 4550 3250
+$EndSCHEMATC
