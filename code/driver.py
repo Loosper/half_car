@@ -1,26 +1,13 @@
 import socket
 
-from settings import PORT, INT_SIZE
+from settings import PORT
 
 
-soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-soc.bind((socket.gethostname(), PORT))
-soc.listen(5)
+soc = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+soc.bind(('localhost', PORT))
 
 while True:
-    con, addr = soc.accept()
+    # should read 1 packet
+    packet, addr = soc.recvfrom(1000)
 
-    header = con.recv(1)
-    if header != b'\xFF':
-        print(header)
-        continue
-    header = con.recv(1)
-    if header != b'\xFF':
-        continue
-
-    msg = []
-
-    for _ in range(4):
-        msg.append(con.recv(INT_SIZE))
-
-    print(msg)
+    print('msg: ' + repr(packet))
