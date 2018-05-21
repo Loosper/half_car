@@ -7,29 +7,25 @@ uint16_t value1Y = 0;
 uint16_t value2X = 0;
 uint16_t value2Y = 0;
 uint16_t ones = 0xffff;
+
 void setup() {
-  Serial.begin(9600);
+    Serial.begin(9600);
 
 }
 
+void write(uint16_t val) {
+    Serial.write((byte*) &val, (int)2);
+}
+
 void loop() {
-  value1X = analogRead(joyPin1X);
-  value1Y = analogRead(joyPin1Y);
-  value2X = analogRead(joyPin2X);
-  value2Y = analogRead(joyPin2Y);
+    value1X = analogRead(joyPin1X);
+    value1Y = analogRead(joyPin1Y);
+    value2X = analogRead(joyPin2X);
+    value2Y = analogRead(joyPin2Y);
 
-  Serial.print(ones);
-//  Serial.print("JoyStick One X = ");
-  Serial.print(value1X);
-//  Serial.print("\nJoyStick One Y = ");
-  Serial.print(value1Y);
-//  Serial.print("\n");
-
-
-//  Serial.print("JoyStick Two X = ");
-  Serial.print(value2X);
-//  Serial.print("\nJoyStick Two Y = ");
-  Serial.print(value2Y);
-//  Serial.print("\n");
-
+    write(ones);
+    write(value1X);
+    write(value1Y);
+    write(value2X);
+    write(value2Y);
 }
