@@ -28,7 +28,6 @@ except:
     raise
     con = serial.Serial('/dev/ttyUSB1', 9600)
 
-soc = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 address = (RPI_ADDR, PORT)
 
 # may be useless
