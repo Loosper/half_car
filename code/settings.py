@@ -1,3 +1,3 @@
 INT_SIZE = 2
-PORT = 1300
-RPI_ADDR = 'localhost'
+PORT = 11300
+RPI_ADDR = '192.168.0.8'

@@ -1,4 +1,4 @@
-update=Mon 19 Feb 2018 19:44:27 EET
+update=Thu 24 May 2018 15:53:36 EEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -66,4 +66,4 @@ LibName34=/opt/kicad-library-4.0.7/library/modules
 LibName35=/opt/kicad-library/library/Espressif
 LibName36=/opt/kicad-ESP8266/ESP8266
 LibName37=/opt/kicad-library/library/microchip
-LibName38=/home/loosper/schoolwork/half_car/joysticks
+LibName38=joystick/joysticks
